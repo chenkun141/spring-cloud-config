@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/chenkun141/spring-cloud-config.git #gitc仓库位置
+          username: chenkun141@163.com  #访问 Git 仓库的用户名
+          password: 1230chend140GH  #访问 Git 仓库的密码
+          search-paths:
+server:
+  port: 8081
+
+#git仓库
