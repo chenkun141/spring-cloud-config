@@ -8,7 +8,7 @@ spring:
           uri: https://github.com/chenkun141/spring-cloud-config #gitc仓库位置
           username: chenkun141@163.com  #访问 Git 仓库的用户名
           password: 1230chend140GH  #访问 Git 仓库的密码
-          search-paths: /configServer/src/main/resources/config
+          search-paths:  /configServer/src/main/resources/configServer,/configServer/src/main/resources/configClient
   profiles:
     active:
 server:
