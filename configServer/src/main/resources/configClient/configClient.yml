@@ -2,5 +2,4 @@ from: git-default-1.0
 spring:
   datasource:
     username: user_default
-
-configServer: configClient_default
+configClient: configClient_default

@@ -2,5 +2,7 @@ from: git-pro-1.0
 spring:
   datasource:
     username: user_pro
-
+spring:
+  application:
+    name: configServer
 configServer: configServer_pro
