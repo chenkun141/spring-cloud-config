@@ -1,0 +1,6 @@
+from: git-pro-1.0
+spring:
+  datasource:
+    username: user_pro
+
+configServer: configClient_pro

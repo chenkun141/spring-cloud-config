@@ -1,0 +1,6 @@
+from: git-dev-1.0
+spring:
+  datasource:
+    username: user_dev
+
+configServer: configClient_dev
