@@ -1,4 +1,0 @@
-from: git-default-1.0
-spring:
-  datasource:
-    username: user_default

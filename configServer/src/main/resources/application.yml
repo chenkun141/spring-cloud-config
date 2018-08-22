@@ -1,13 +1,20 @@
 spring:
   application:
-    name: config-service
+    name: configServer
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/chenkun141/spring-cloud-config.git #gitc仓库位置
+          uri: https://github.com/chenkun141/spring-cloud-config #gitc仓库位置
           username: chenkun141@163.com  #访问 Git 仓库的用户名
           password: 1230chend140GH  #访问 Git 仓库的密码
-          search-paths:
+          search-paths: /configServer/src/main/resources/config
+  profiles:
+    active:
 server:
   port: 8081
+#服务注册中心实例的主机名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka
