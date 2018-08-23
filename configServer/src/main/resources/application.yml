@@ -7,7 +7,7 @@ spring:
         git: #不使用https ,如果使用https 需要配置 uri,username,password属性,
           uri: git@github.com:chenkun141/spring-cloud-config.git #gitc仓库位置
           #username: chenkun141@163.com  #访问 Git 仓库的用户名
-          #password: 1230chend140GH  #访问 Git 仓库的密码
+          #password: ***********  #访问 Git 仓库的密码
           search-paths:  /configServer/src/main/resources/configServer, /configServer/src/main/resources/configClient
           ignore-local-ssh-settings: true
           host-key: someHostKey
