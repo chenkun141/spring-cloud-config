@@ -4,12 +4,42 @@ spring:
   cloud:
     config:
       server:
-        git:
-          uri: https://github.com/chenkun141/spring-cloud-config #gitc仓库位置
-          username: chenkun141@163.com  #访问 Git 仓库的用户名
-          password: 1230chend140GH  #访问 Git 仓库的密码
+        git: #不使用https ,如果使用https 需要配置 uri,username,password属性,
+          uri: git@github.com:chenkun141/spring-cloud-config.git #gitc仓库位置
+          #username: chenkun141@163.com  #访问 Git 仓库的用户名
+          #password: 1230chend140GH  #访问 Git 仓库的密码
           search-paths:  /configServer/src/main/resources/configServer, /configServer/src/main/resources/configClient
-      name: configserver
+          ignore-local-ssh-settings: true
+          host-key: someHostKey
+          host-key-algorithm: ssh-rsa
+          private-key: |
+                    -----BEGIN RSA PRIVATE KEY-----
+                    MIIEpAIBAAKCAQEA4TIaBGdLUbjZVTd/umbxauAe0tnQsGt+My4aYb1/b3jTHYuD
+                    y+Ebapm9OJLwJcxjB/JNIgUOYlztOTiJj9w+b4fYfVwG2uSldxawtoIkUgXoRfE3
+                    JGGQ3wOZh0qZ021I5LV41pui0eK46igoXtGpc0kiTHYqtyoqj0aPd3DaHZ1lGVbp
+                    uNFPYEcCb86P4i8Yw3wLDxPaj//dmL9ZljQ2pTj2z21aORgpHHJOM87lfT30Q+WW
+                    86Tto02VZu8zka7PQHKIFB5Adbpgh64gHkQMNpshhBcUi2vFHeGQ+SsjAVL2eezA
+                    lIZXq6yPmx9q2AUznYjNpFvtod/gPohLx0hzBwIDAQABAoIBAAob86sK8AilIax/
+                    p0443NGNahTRDls9GBc4FJsapKPeaqvC3ZHDczWf3Syy+/DWcgOjTu8eBv1HaqbM
+                    8O/yVSMwl/lYrj4ZUYw9CoXG5daAyWKKZ41Mi/JW+Qdnw+wH1ePeeaQ4rGB7qw1n
+                    7BgFlXPFbrK8A0Lhs7Nm2X3lJQV7O7zbnYmDZ0QJkdtmFkauMDMHME2FzwQe3DNx
+                    RSSyXFHZb+oidPowV8R3aOj2EIcQ/hY1wd9dveu7ZHov3a6eCCBAexNxbfn7uWV1
+                    3hd1sVrtWePSNxM2IkYFWgG75yhkHadUmXGasKMkDxDwSlfr06I3tUZiaEwq0+bL
+                    Ix/37UECgYEA/k0vL2P8clmlJ8cDa2/utuJnTb8zQXJP7pJeSp2QdI7OhMxfJ91D
+                    JM310wd3wbQPUJWf7+VVo4YyiGw/mWkZuHS3ZfBnDyleTQvJf5ObbVgdrLCmmJFR
+                    EsMvYPRSqgGZ5M4DDXwlkezK/CnTurTURtrIH3BR1+NkqdB4vLmO5BECgYEA4rMm
+                    pjg1YgjSawViDkcNI/4GAUvday2I7DbOTJTJ9OLsd55CTzEUXjXYbIW1KUGnURXV
+                    kbnwKAyh6B8HU0kmsERIKDy7a3nO0RMwt78Pk4DMvlbS6HLG28KgFf5qDymNuznm
+                    f+mNTa3D+P1yYqzVxW0DNF+TKYibk5HSIgOKHZcCgYEAxh92OpLIlIJ5JKNta5/a
+                    OIvtdeoX0c5wretFIRbe+6BjD512KUW+UQdRlScFS1mwcNURtUJUVUFxT04ewrPa
+                    gRYV6IrCkFJnkNk1FHr4pdj3zZoXQVg99MMyv3O6j48NyfAi+reVQbpdbtZbiePm
+                    WomLTssgSHV18MNlvYtH4zECgYEAoDc20HCXIcLUWziBtU93tQE5Yz8nrDCRPUf6
+                    gtsA5CZgMqXRfUBVgcOSQhg5EYBJ7J9+wa/kT5ml73PGbJEdW6PWT0Gkv29lwBNM
+                    8f+A1aFIkhiwlAFSE0w4cXLNqAuZFEH2al44NDbjcpxEdAJsTkwd4KzPR6I5OZDs
+                    LofL298CgYAm7Sg36WNx5Rr70jw0TumXRomg4vurFhLcGjW5zxCRlQdL1TS7JknY
+                    vBqtWMFKlUEd5tA9zSMV0XgmYH5Mo1GwEYFlqnqDK8kSYtVEi/SWsP3qtEtWW+mo
+                    EyqtQMOhKG89woLe7ubbjTQ9FKh+ynIrhDroMgdgV1QfBYU1nD0Q7g==
+                    -----END RSA PRIVATE KEY-----
 server:
   port: 8081
 #服务注册中心实例的主机名
