@@ -8,7 +8,6 @@ spring:
           uri: git@github.com:chenkun141/spring-cloud-config.git #gitc仓库位置
           #username: chenkun141@163.com  #访问 Git 仓库的用户名
           #password: ***********  #访问 Git 仓库的密码
-          search-paths:  /configServer/src/main/resources/configServer, /configServer/src/main/resources/configClient
           ignore-local-ssh-settings: true
           host-key: someHostKey
           host-key-algorithm: ssh-rsa
@@ -40,6 +39,7 @@ spring:
                     vBqtWMFKlUEd5tA9zSMV0XgmYH5Mo1GwEYFlqnqDK8kSYtVEi/SWsP3qtEtWW+mo
                     EyqtQMOhKG89woLe7ubbjTQ9FKh+ynIrhDroMgdgV1QfBYU1nD0Q7g==
                     -----END RSA PRIVATE KEY-----
+          search-paths:  /configServer/src/main/resources/configServer, /configServer/src/main/resources/configClient
 server:
   port: 8081
 #服务注册中心实例的主机名
