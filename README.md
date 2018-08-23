@@ -64,7 +64,7 @@ Spring Cloud Config分为Config Server和Config Client两部分,为分布式系�
 			          uri: git@github.com:chenkun141/spring-cloud-config.git 
 			          ignore-local-ssh-settings: true
 			          private-key: | 秘钥内容
-					  strict-host-key-checking: true
+				  strict-host-key-checking: true
 			          search-paths:  /configServer/src/main/resources/configServer, /configServer/src/main/resources/configClient
 			server:
 			  port: 8081
