@@ -10,8 +10,6 @@ spring:
           #username: ********  #访问 Git 仓库的用户名
           #password: ********  #访问 Git 仓库的密码
           ignore-local-ssh-settings: true
-          host-key: someHostKey
-          host-key-algorithm: ssh-rsa
           private-key: |
                     -----BEGIN RSA PRIVATE KEY-----
                     MIIEpAIBAAKCAQEA4TIaBGdLUbjZVTd/umbxauAe0tnQsGt+My4aYb1/b3jTHYuD
