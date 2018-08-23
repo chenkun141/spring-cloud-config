@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      uri: http://127.0.0.1:8081/
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+  application:
+    name: configClient
+server:
+  port: 8082
+#服务注册中心实例的主机名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8090/eureka
